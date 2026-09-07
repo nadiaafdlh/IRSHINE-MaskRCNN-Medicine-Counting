@@ -139,48 +139,36 @@ Checkpoints, training logs, and experiment results were saved throughout the tra
 
 # 🔄 Training Pipeline
 
-```text
-Environment Check
-        ↓
-Install Dependencies
-        ↓
-Load Dataset from Roboflow
-        ↓
-Dataset Analysis
-        ↓
-Dataset & DataLoader
-        ↓
-Mosaic Augmentation
-        ↓
-ResNet-101 + FPN
-        ↓
-AdamW Optimizer
-        ↓
-CosineAnnealingWarmRestarts
-        ↓
-150-Epoch Training
-        ↓
-Model Evaluation
-        ↓
-Best Model Selection
-        ↓
-TTA Inference
-        ↓
-Medicine Detection + Instance Segmentation
-        ↓
-Object Counting
+```
+1. Environment Check
+2. Install Dependencies
+3. Load Dataset from Roboflow
+4. Dataset Analysis
+5. Dataset & DataLoader
+6. Mosaic Augmentation
+7. ResNet-101 + FPN
+8. AdamW Optimizer
+9. CosineAnnealingWarmRestarts
+10. 150-Epoch Training
+11. Model Evaluation
+12. Best Model Selection
+13. TTA Inference
+14. Medicine Detection + Instance Segmentation
+15. Object Counting
 ```
 
 ## 📈 Evaluation
 
+
 The model is evaluated using multiple metrics to assess both segmentation and detection performance:
 
-* **mAP** — overall detection/segmentation performance
-* **IoU** — overlap between predicted and ground-truth masks
-* **Precision** — correctness of positive predictions
-* **Recall** — completeness of detected objects
-* **F1-Score** — balance between precision and recall
-* **Accuracy** — additional classification/detection performance measure
+* **mAP** = Overall detection/segmentation performance
+* **IoU** = Overlap between predicted and ground-truth masks
+* **Precision** = Correctness of positive predictions
+* **Recall** = Completeness of detected objects
+* **F1-Score** = Balance between precision and recall
+* **Accuracy** = Additional classification/detection performance measure
+
 
 The evaluation pipeline also includes visualization and custom-image inference.
 
